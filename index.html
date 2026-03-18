@@ -38,6 +38,7 @@
 <h2 class="text-slate-900 dark:text-white text-sm font-bold tracking-tight leading-tight">I Can't Believe It's Corrupt</h2>
 </div>
 <nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#abstract">Abstract</a>
 <a class="text-sm font-medium hover:text-primary transition-colors" href="#simulator">Simulation</a>
 <a class="text-sm font-medium hover:text-primary transition-colors" href="#results">Results</a>
 <a class="text-sm font-medium hover:text-primary transition-colors" href="#methodology">Methodology</a>
@@ -49,39 +50,44 @@
 </div>
 </header>
 <!-- Hero Section -->
-<section class="relative min-h-[700px] flex flex-col items-center justify-center px-6 overflow-hidden">
+<section class="relative min-h-[600px] flex flex-col items-center justify-center px-6 overflow-hidden">
 <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #007bff 1px, transparent 0); background-size: 40px 40px;"></div>
 <div class="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/50 to-background-dark pointer-events-none"></div>
 <div class="relative z-10 max-w-5xl text-center space-y-8">
-<div class="flex flex-col items-center gap-4">
+<div class="flex flex-wrap items-center justify-center gap-3">
 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
-<span class="relative flex h-2 w-2">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-</span>
-        Simulation Active
+        Anonymous ACL Submission
     </div>
-<div class="px-4 py-1 bg-slate-800/50 border border-slate-700 rounded-full text-[11px] font-bold text-slate-400 uppercase tracking-tighter">
-        42,263 transcript segments evaluated
+<div class="px-4 py-1.5 bg-slate-800/50 border border-slate-700 rounded-full text-xs font-bold text-slate-400">
+        42,263 transcript segments
     </div>
 </div>
-<h1 class="text-5xl md:text-7xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight">
-    A simulated government you can explore — <span class="text-corruption">and watch fail.</span>
+<h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight">
+    I Can't Believe It's Corrupt
 </h1>
-<p class="text-lg md:text-2xl font-medium text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
-    "Governance structure is a stronger driver of corruption outcomes than model identity."
-</p>
-<p class="text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
-    Investigating the intersection of institutional design and AI-driven corruption. Discover how agentic workflows collapse under systemic pressure.
+<p class="text-xl md:text-2xl font-medium text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">
+    Evaluating Corruption in Multi-Agent Governance Systems
 </p>
 <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-<button class="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 rounded-xl transition-all shadow-lg shadow-primary/20">
-                    Explore the simulation
-                </button>
-<button class="bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold h-14 px-8 rounded-xl transition-all">
-                    See results
-                </button>
+<a href="#abstract" class="bg-primary hover:bg-primary/90 text-white font-bold h-12 px-8 rounded-xl transition-all shadow-lg shadow-primary/20 flex items-center">
+                    Read Abstract
+                </a>
+<a href="#simulator" class="bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold h-12 px-8 rounded-xl transition-all flex items-center">
+                    Explore Simulator
+                </a>
+<a href="#results" class="bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold h-12 px-8 rounded-xl transition-all flex items-center">
+                    See Results
+                </a>
 </div>
+</div>
+</section>
+<!-- Abstract -->
+<section class="py-16 px-6 lg:px-20 border-b border-slate-200 dark:border-slate-800" id="abstract">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-xs font-bold text-primary uppercase tracking-widest mb-6">Abstract</h2>
+<p class="text-base md:text-lg leading-[1.9] text-slate-700 dark:text-slate-300">
+Large language models are increasingly proposed as autonomous agents for high-stakes public workflows, yet we lack systematic evidence about whether they would follow institutional rules when granted authority. We present evidence that <strong class="text-white">integrity in institutional AI should be treated as a pre-deployment requirement</strong> rather than a post-deployment assumption. We evaluate multi-agent governance simulations in which agents occupy formal governmental roles under different authority structures, and we score rule-breaking and abuse outcomes with an independent rubric-based judge across 42,263 transcript segments. While we advance this position, the core contribution is empirical: among models operating below saturation, <strong class="text-white">governance structure is a stronger driver of corruption-related outcomes than model identity</strong>, with large differences across regimes and model–governance pairings. Lightweight safeguards can reduce risk in some settings but do not consistently prevent severe failures. These results imply that institutional design is a precondition for safe delegation: before real authority is assigned to LLM agents, systems should undergo stress testing under governance-like constraints with enforceable rules, auditable logs, and human oversight on high-impact actions.
+</p>
 </div>
 </section>
 <!-- Key Numbers Strip -->
