@@ -446,49 +446,172 @@ Large language models are increasingly proposed as autonomous agents for high-st
 </div>
 </div>
 </section>
-<!-- How It Works: Flow Diagram -->
+<!-- How It Works: Architecture Diagram -->
 <section class="py-24 px-6 lg:px-20 bg-slate-900 text-white">
 <div class="max-w-7xl mx-auto text-center mb-16">
 <h2 class="text-3xl font-bold mb-4">The Simulation Engine</h2>
-<p class="text-slate-400 max-w-2xl mx-auto">Built on <span class="text-white font-semibold">Concordia</span> (Vezhnevets et al., 2023) — a multi-agent framework for running LLM-powered agents in simulated social environments.</p>
+<p class="text-slate-400 max-w-2xl mx-auto">Built on <span class="text-white font-semibold">Concordia</span> (Vezhnevets et al., 2023). Agents read shared world state, produce actions under governance constraints, and interact through a Game Master that routes messages, resolves events, and records auditable logs.</p>
 </div>
-<div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-4 relative">
-<!-- Connecting lines for desktop -->
-<div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-800 -translate-y-1/2 z-0"></div>
-<div class="relative z-10 flex flex-col items-center gap-4 group">
-<div class="size-16 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined">smart_toy</span>
+<style>
+@keyframes flowPulse1 { 0%,100% { opacity:.2 } 40%,60% { opacity:1 } }
+@keyframes flowPulse2 { 0%,100% { opacity:.2 } 40%,60% { opacity:1 } }
+@keyframes flowPulse3 { 0%,100% { opacity:.2 } 40%,60% { opacity:1 } }
+.flow-1 { animation: flowPulse1 4s ease-in-out infinite; }
+.flow-2 { animation: flowPulse2 4s ease-in-out 1.33s infinite; }
+.flow-3 { animation: flowPulse3 4s ease-in-out 2.66s infinite; }
+.arch-block { transition: transform 0.2s, box-shadow 0.2s; }
+.arch-block:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,123,255,0.1); }
+</style>
+<div class="max-w-5xl mx-auto">
+<!-- Top row: World State ← flow → Actors -->
+<div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-6 items-start mb-6">
+<!-- World State & History -->
+<div class="arch-block bg-slate-800/80 rounded-2xl border border-slate-700 p-6">
+<div class="flex items-center gap-2 mb-5">
+<span class="material-symbols-outlined text-primary">public</span>
+<h3 class="text-sm font-bold uppercase tracking-widest">World State & History</h3>
 </div>
-<p class="text-sm font-bold uppercase tracking-widest text-primary">Agents</p>
-<p class="text-[10px] text-slate-400 text-center px-2">Role-specific LLM instances with private memory.</p>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-slate-900/80 rounded-lg p-3 border border-slate-700/50">
+<span class="material-symbols-outlined text-slate-400 text-base mb-1">language</span>
+<p class="text-[11px] font-bold">Shared World</p>
+<p class="text-[9px] text-slate-500">Resources, budgets, GDP</p>
 </div>
-<div class="relative z-10 flex flex-col items-center gap-4 group">
-<div class="size-16 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined">terminal</span>
+<div class="bg-slate-900/80 rounded-lg p-3 border border-slate-700/50">
+<span class="material-symbols-outlined text-slate-400 text-base mb-1">gavel</span>
+<p class="text-[11px] font-bold">Laws & Constitution</p>
+<p class="text-[9px] text-slate-500">Procedural constraints</p>
 </div>
-<p class="text-sm font-bold uppercase tracking-widest">Game Master</p>
-<p class="text-[10px] text-slate-400 text-center px-2">Orchestrates turns and environment updates.</p>
+<div class="bg-slate-900/80 rounded-lg p-3 border border-slate-700/50">
+<span class="material-symbols-outlined text-slate-400 text-base mb-1">folder_open</span>
+<p class="text-[11px] font-bold">Event Logs</p>
+<p class="text-[9px] text-slate-500">Auditable history</p>
 </div>
-<div class="relative z-10 flex flex-col items-center gap-4 group">
-<div class="size-16 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined">public</span>
+<div class="bg-slate-900/80 rounded-lg p-3 border border-slate-700/50">
+<span class="material-symbols-outlined text-slate-400 text-base mb-1">account_balance</span>
+<p class="text-[11px] font-bold">Government Type</p>
+<p class="text-[9px] text-slate-500">Template regime ID</p>
 </div>
-<p class="text-sm font-bold uppercase tracking-widest">World State</p>
-<p class="text-[10px] text-slate-400 text-center px-2">Shared database of resource and laws.</p>
 </div>
-<div class="relative z-10 flex flex-col items-center gap-4 group">
-<div class="size-16 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined">description</span>
 </div>
-<p class="text-sm font-bold uppercase tracking-widest">Logs</p>
-<p class="text-[10px] text-slate-400 text-center px-2">Verbatim capture of agent reasoning.</p>
+<!-- Flow arrow: Observations -->
+<div class="hidden md:flex flex-col items-center justify-center gap-2 px-2 pt-8">
+<div class="flow-1 flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 rounded-full px-4 py-1.5">
+<span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest whitespace-nowrap">1. Observations</span>
+<span class="material-symbols-outlined text-emerald-400 text-sm">arrow_forward</span>
 </div>
-<div class="relative z-10 flex flex-col items-center gap-4 group">
-<div class="size-16 rounded-full bg-corruption flex items-center justify-center shadow-lg shadow-corruption/20 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined">troubleshoot</span>
 </div>
-<p class="text-sm font-bold uppercase tracking-widest text-corruption">Judge</p>
-<p class="text-[10px] text-slate-400 text-center px-2">Final evaluation of ethical breach.</p>
+<!-- Actors -->
+<div class="arch-block bg-slate-800/80 rounded-2xl border border-slate-700 p-6">
+<div class="flex items-center gap-2 mb-5">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+<h3 class="text-sm font-bold uppercase tracking-widest">Actors</h3>
+<span class="text-[10px] text-slate-500 ml-auto">LLM agents</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="bg-slate-900/80 rounded-lg p-2.5 border border-slate-700/50 text-center">
+<span class="material-symbols-outlined text-primary text-xl">person</span>
+<p class="text-[9px] font-bold mt-1">Treasury</p>
+</div>
+<div class="bg-slate-900/80 rounded-lg p-2.5 border border-slate-700/50 text-center">
+<span class="material-symbols-outlined text-primary text-xl">person</span>
+<p class="text-[9px] font-bold mt-1">Senate</p>
+</div>
+<div class="bg-slate-900/80 rounded-lg p-2.5 border border-slate-700/50 text-center">
+<span class="material-symbols-outlined text-primary text-xl">person</span>
+<p class="text-[9px] font-bold mt-1">Judiciary</p>
+</div>
+<div class="bg-slate-900/80 rounded-lg p-2.5 border border-slate-700/50 text-center">
+<span class="material-symbols-outlined text-slate-500 text-xl">person</span>
+<p class="text-[9px] font-bold mt-1">Defense</p>
+</div>
+<div class="bg-slate-900/80 rounded-lg p-2.5 border border-slate-700/50 text-center">
+<span class="material-symbols-outlined text-slate-500 text-xl">person</span>
+<p class="text-[9px] font-bold mt-1">GAO</p>
+</div>
+<div class="bg-slate-900/80 rounded-lg p-2.5 border border-slate-700/50 text-center">
+<span class="text-[9px] text-slate-500 font-bold">+23 more</span>
+</div>
+</div>
+<p class="text-[9px] text-slate-500 mt-3 italic">Each agent has role-specific goals, authorities, constraints, and private memory.</p>
+</div>
+</div>
+<!-- Mobile flow labels -->
+<div class="md:hidden flex justify-center my-2">
+<div class="flow-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full px-4 py-1.5">
+<span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest">1. Observations → Agents</span>
+</div>
+</div>
+<!-- Flow arrows: Actions down + Update down -->
+<div class="hidden md:grid grid-cols-[1fr_auto_1fr] gap-6 mb-6">
+<div class="flex justify-center">
+<div class="flow-3 flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5">
+<span class="material-symbols-outlined text-primary text-sm">arrow_upward</span>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">3. Update</span>
+</div>
+</div>
+<div></div>
+<div class="flex justify-center">
+<div class="flow-2 flex items-center gap-2 bg-amber-500/20 border border-amber-500/30 rounded-full px-4 py-1.5">
+<span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">2. Actions</span>
+<span class="material-symbols-outlined text-amber-400 text-sm">arrow_downward</span>
+</div>
+</div>
+</div>
+<!-- Mobile flow labels -->
+<div class="md:hidden flex flex-col items-center gap-2 my-2">
+<div class="flow-2 bg-amber-500/20 border border-amber-500/30 rounded-full px-4 py-1.5">
+<span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">2. Actions → Game Master</span>
+</div>
+<div class="flow-3 bg-primary/20 border border-primary/30 rounded-full px-4 py-1.5">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">3. Update → World State</span>
+</div>
+</div>
+<!-- Game Master -->
+<div class="arch-block bg-slate-800/80 rounded-2xl border border-slate-700 p-6">
+<div class="flex items-center gap-2 mb-5">
+<span class="material-symbols-outlined text-amber-400">terminal</span>
+<h3 class="text-sm font-bold uppercase tracking-widest">Game Master</h3>
+<span class="text-[10px] text-slate-500 ml-auto">Strictly reactive — no corruption injection</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+<div class="bg-slate-900/80 rounded-lg p-3 border border-slate-700/50 text-center">
+<span class="material-symbols-outlined text-amber-400/60 text-xl mb-1">bolt</span>
+<p class="text-[10px] font-bold">Event Resolution</p>
+<p class="text-[8px] text-slate-500">Converts actions to events</p>
+</div>
+<div class="bg-slate-900/80 rounded-lg p-3 border border-slate-700/50 text-center">
+<span class="material-symbols-outlined text-amber-400/60 text-xl mb-1">mail</span>
+<p class="text-[10px] font-bold">Message Router</p>
+<p class="text-[8px] text-slate-500">Routes private messages</p>
+</div>
+<div class="bg-slate-900/80 rounded-lg p-3 border border-slate-700/50 text-center">
+<span class="material-symbols-outlined text-amber-400/60 text-xl mb-1">swap_vert</span>
+<p class="text-[10px] font-bold">Turn Manager</p>
+<p class="text-[8px] text-slate-500">Selects who acts next</p>
+</div>
+<div class="bg-slate-900/80 rounded-lg p-3 border border-slate-700/50 text-center">
+<span class="material-symbols-outlined text-amber-400/60 text-xl mb-1">database</span>
+<p class="text-[10px] font-bold">World State</p>
+<p class="text-[8px] text-slate-500">Maintains state variables</p>
+</div>
+<div class="bg-slate-900/80 rounded-lg p-3 border border-slate-700/50 text-center">
+<span class="material-symbols-outlined text-amber-400/60 text-xl mb-1">description</span>
+<p class="text-[10px] font-bold">Log Recorder</p>
+<p class="text-[8px] text-slate-500">Notes observations</p>
+</div>
+</div>
+</div>
+<!-- Judge (post-hoc) -->
+<div class="mt-6 flex flex-col items-center gap-3">
+<div class="w-px h-6 bg-slate-700 border-l border-dashed border-slate-600"></div>
+<div class="arch-block bg-corruption/10 border border-corruption/30 rounded-xl px-6 py-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-corruption text-2xl">troubleshoot</span>
+<div>
+<p class="text-sm font-bold text-corruption">Independent LLM Judge</p>
+<p class="text-[10px] text-slate-400">Post-hoc evaluation of all transcript segments via rubric-based scoring (gemini-3-flash). Separate from actor models.</p>
+</div>
+</div>
 </div>
 </div>
 </section>
