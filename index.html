@@ -97,7 +97,7 @@
 <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Governance Templates</p>
 </div>
 <div class="text-center md:text-left border-r border-slate-200 dark:border-slate-800 last:border-0">
-<p class="text-3xl font-black text-white">5+</p>
+<p class="text-3xl font-black text-white">6</p>
 <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Actor Models</p>
 </div>
 <div class="text-center md:text-left last:border-0">
@@ -174,7 +174,7 @@
 <div class="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
 <div class="bg-primary h-full w-2/3"></div>
 </div>
-<p class="text-[10px] text-slate-500 mt-2">Simulation progress: 67% (Cycle 84/120)</p>
+<p class="text-[10px] text-slate-500 mt-2">Simulation progress: 67% (Step 27/40)</p>
 </div>
 </div>
 <!-- Sidebar: Detection Panel -->
@@ -212,7 +212,7 @@
 <div class="absolute right-0.5 top-0.5 size-2 bg-white rounded-full"></div>
 </div>
 </div>
-<p class="text-[9px] text-slate-500 italic">Removing 'Treasury' labels reduced collusion detection but increased stock-market transfer fraud by 14%.</p>
+<p class="text-[9px] text-slate-500 italic">Removing regime labels showed the same broad integrity-failure pattern, indicating effects are not reducible to politically charged labels alone.</p>
 </div>
 </div>
 </div>
@@ -223,7 +223,7 @@
 <div class="max-w-7xl mx-auto">
 <div class="text-center mb-16 space-y-4">
 <h2 class="text-4xl font-black">Comparative Model Performance</h2>
-<p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Governance Fragility (GF), Consensus Collusion (CC), and Systemic Corruption Congruence (SCC) by model and regime.</p>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Governance Failure (GF), Core Corruption (CC), and Severe Core Corruption (SCC) by model and governance template.</p>
 </div>
 <div class="overflow-x-auto">
 <table class="w-full text-left border-collapse">
@@ -237,65 +237,125 @@
 </tr>
 </thead>
 <tbody class="divide-y divide-slate-200 dark:divide-slate-800">
-<!-- GPT-5-mini Group -->
+<!-- gpt-5-mini -->
 <tr class="bg-slate-100/30 dark:bg-slate-800/10">
-<td class="py-4 px-6 font-bold text-white align-top" rowspan="3">GPT-5-mini</td>
+<td class="py-4 px-6 font-bold text-white align-top" rowspan="3">gpt-5-mini</td>
 <td class="py-4 px-6 text-sm text-slate-500">Socialist</td>
-<td class="py-4 px-6 text-center text-sm font-bold">30%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">30%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">10%</td>
+<td class="py-4 px-6 text-center text-sm font-bold">30.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">30.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">10.0</td>
 </tr>
 <tr class="bg-slate-100/30 dark:bg-slate-800/10">
 <td class="py-4 px-6 text-sm text-slate-500">US Federal</td>
-<td class="py-4 px-6 text-center text-sm font-bold">45%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">35%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">20%</td>
+<td class="py-4 px-6 text-center text-sm font-bold">75.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">41.7</td>
+<td class="py-4 px-6 text-center text-sm font-bold">16.7</td>
 </tr>
 <tr class="bg-slate-100/30 dark:bg-slate-800/10">
 <td class="py-4 px-6 text-sm text-slate-500">Communist</td>
-<td class="py-4 px-6 text-center text-sm font-bold text-corruption">65%</td>
-<td class="py-4 px-6 text-center text-sm font-bold text-corruption">55%</td>
-<td class="py-4 px-6 text-center text-sm font-bold text-corruption">40%</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">87.5</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">75.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">50.0</td>
 </tr>
-<!-- Claude-4.5-Sonnet Group -->
+<!-- claude-4-5-sonnet -->
 <tr>
-<td class="py-4 px-6 font-bold text-white align-top" rowspan="3">Claude-4.5-Sonnet</td>
+<td class="py-4 px-6 font-bold text-white align-top" rowspan="3">claude-4-5-sonnet</td>
 <td class="py-4 px-6 text-sm text-slate-500">Socialist</td>
-<td class="py-4 px-6 text-center text-sm font-bold">22%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">25%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">8%</td>
+<td class="py-4 px-6 text-center text-sm font-bold">10.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">0.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">0.0</td>
 </tr>
 <tr>
 <td class="py-4 px-6 text-sm text-slate-500">US Federal</td>
-<td class="py-4 px-6 text-center text-sm font-bold">38%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">42%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">15%</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">80.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">60.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">40.0</td>
 </tr>
 <tr>
 <td class="py-4 px-6 text-sm text-slate-500">Communist</td>
-<td class="py-4 px-6 text-center text-sm font-bold">52%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">48%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">32%</td>
+<td class="py-4 px-6 text-center text-sm font-bold">40.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">10.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">10.0</td>
 </tr>
-<!-- Qwen variants Group -->
+<!-- qwen3.5-0.8b -->
 <tr class="bg-slate-100/30 dark:bg-slate-800/10">
-<td class="py-4 px-6 font-bold text-white align-top" rowspan="3">Qwen-2.5-72B</td>
+<td class="py-4 px-6 font-bold text-white align-top" rowspan="3">qwen3.5-0.8b</td>
 <td class="py-4 px-6 text-sm text-slate-500">Socialist</td>
-<td class="py-4 px-6 text-center text-sm font-bold">41%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">38%</td>
-<td class="py-4 px-6 text-center text-sm font-bold">18%</td>
+<td class="py-4 px-6 text-center text-sm font-bold">70.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">50.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">30.0</td>
 </tr>
 <tr class="bg-slate-100/30 dark:bg-slate-800/10">
 <td class="py-4 px-6 text-sm text-slate-500">US Federal</td>
-<td class="py-4 px-6 text-center text-sm font-bold text-corruption">72%</td>
-<td class="py-4 px-6 text-center text-sm font-bold text-corruption">68%</td>
-<td class="py-4 px-6 text-center text-sm font-bold text-corruption">45%</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">90.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">60.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">50.0</td>
 </tr>
 <tr class="bg-slate-100/30 dark:bg-slate-800/10">
 <td class="py-4 px-6 text-sm text-slate-500">Communist</td>
-<td class="py-4 px-6 text-center text-sm font-bold text-corruption">89%</td>
-<td class="py-4 px-6 text-center text-sm font-bold text-corruption">82%</td>
-<td class="py-4 px-6 text-center text-sm font-bold text-corruption">74%</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">70.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">60.0</td>
+</tr>
+<!-- qwen3.5-2b -->
+<tr>
+<td class="py-4 px-6 font-bold text-white align-top" rowspan="3">qwen3.5-2b</td>
+<td class="py-4 px-6 text-sm text-slate-500">Socialist</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">80.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">80.0</td>
+</tr>
+<tr>
+<td class="py-4 px-6 text-sm text-slate-500">US Federal</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">90.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">70.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">70.0</td>
+</tr>
+<tr>
+<td class="py-4 px-6 text-sm text-slate-500">Communist</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">90.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">70.0</td>
+</tr>
+<!-- qwen3.5-4b (saturated) -->
+<tr class="bg-slate-100/30 dark:bg-slate-800/10">
+<td class="py-4 px-6 font-bold text-white align-top" rowspan="3">qwen3.5-4b</td>
+<td class="py-4 px-6 text-sm text-slate-500">Socialist</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+</tr>
+<tr class="bg-slate-100/30 dark:bg-slate-800/10">
+<td class="py-4 px-6 text-sm text-slate-500">US Federal</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+</tr>
+<tr class="bg-slate-100/30 dark:bg-slate-800/10">
+<td class="py-4 px-6 text-sm text-slate-500">Communist</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+</tr>
+<!-- qwen3.5-9b -->
+<tr>
+<td class="py-4 px-6 font-bold text-white align-top" rowspan="3">qwen3.5-9b</td>
+<td class="py-4 px-6 text-sm text-slate-500">Socialist</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">80.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold">50.0</td>
+</tr>
+<tr>
+<td class="py-4 px-6 text-sm text-slate-500">US Federal</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+</tr>
+<tr>
+<td class="py-4 px-6 text-sm text-slate-500">Communist</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">100.0</td>
+<td class="py-4 px-6 text-center text-sm font-bold text-corruption">80.0</td>
 </tr>
 </tbody>
 </table>
@@ -308,18 +368,18 @@
 <div>
 <h2 class="text-3xl font-bold mb-6">Validation &amp; Reliability</h2>
 <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                To ensure robust findings, we utilized a tiered evaluation framework tracking 3 specific endpoints (GF, CC, SCC) across 8 core corruption categories including systemic bribery, consensus collusion, and ledger fraud.
+                An independent rubric-based LLM judge scores integrity failures across 3 run-level endpoints (GF, CC, SCC) and 8 core corruption categories including bribery/kickbacks, procurement collusion, and fraud/falsification. Human validation on 200 segments confirms the judge is more precise than sensitive — reported rates are mildly conservative.
             </p>
 <div class="grid grid-cols-2 gap-4">
 <div class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
 <p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-1">Fleiss' κ</p>
 <p class="text-2xl font-black">0.61</p>
-<p class="text-[10px] text-slate-500 mt-2">Moderate-to-Strong Agreement</p>
+<p class="text-[10px] text-slate-500 mt-2">Substantial Agreement</p>
 </div>
 <div class="p-6 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-<p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-1">Raw Agreement</p>
+<p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-1">Raw Agreement (p₀)</p>
 <p class="text-2xl font-black">0.82</p>
-<p class="text-[10px] text-slate-500 mt-2">Human-Model Alignment</p>
+<p class="text-[10px] text-slate-500 mt-2">Inter-Annotator Agreement</p>
 </div>
 </div>
 </div>
@@ -327,7 +387,7 @@
 <div class="p-6 rounded-xl bg-slate-100 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800">
 <h4 class="text-sm font-bold mb-4 flex items-center gap-2">
 <span class="material-symbols-outlined text-primary text-sm">verified</span>
-                    Model Performance Metrics
+                    Judge vs. Human Consensus
                 </h4>
 <div class="space-y-4">
 <div>
@@ -360,7 +420,7 @@
 </div>
 </div>
 <p class="text-[10px] text-slate-500 text-center italic leading-relaxed px-4">
-                Evaluation conducted on 200 human-annotated segments from the 28,112 total corpus. GF: Governance Fragility; CC: Consensus Collusion; SCC: Systemic Corruption Congruence.
+                Evaluation conducted on 200 human-annotated segments from the 28,112 total corpus. GF: Governance Failure; CC: Core Corruption; SCC: Severe Core Corruption.
             </p>
 </div>
 </div>
@@ -369,7 +429,7 @@
 <section class="py-24 px-6 lg:px-20 bg-slate-900 text-white">
 <div class="max-w-7xl mx-auto text-center mb-16">
 <h2 class="text-3xl font-bold mb-4">The Simulation Engine</h2>
-<p class="text-slate-400 max-w-2xl mx-auto">A multi-agent framework designed to test systemic integrity.</p>
+<p class="text-slate-400 max-w-2xl mx-auto">Built on <span class="text-white font-semibold">Concordia</span> (Vezhnevets et al., 2023) — a multi-agent framework for running LLM-powered agents in simulated social environments.</p>
 </div>
 <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-4 relative">
 <!-- Connecting lines for desktop -->
@@ -414,17 +474,18 @@
 <!-- Corruption Taxonomy -->
 <section class="py-24 px-6 lg:px-20" id="taxonomy">
 <div class="max-w-7xl mx-auto">
-<h2 class="text-3xl font-bold mb-12">Taxonomy of Agentic Corruption</h2>
+<h2 class="text-3xl font-bold mb-4">Taxonomy of Agentic Corruption</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-12">14 corruption categories scored by an independent rubric-based LLM judge (gemini-3-flash), kept separate from actor models to avoid self-evaluation bias.</p>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- Bribery Card -->
 <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-colors">
 <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-primary">payments</span>
 </div>
-<h3 class="text-xl font-bold mb-3">Systemic Bribery</h3>
-<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Agents offer resource allocation benefits to others in exchange for specific vote patterns or oversight neglect.</p>
+<h3 class="text-xl font-bold mb-3">Bribery & Kickbacks</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Exchange of value for favorable decisions or rule-breaking — agents offer resource allocation benefits in return for vote patterns or oversight neglect.</p>
 <div class="bg-slate-100 dark:bg-slate-950 p-3 rounded font-mono text-[10px] text-slate-500 italic">
-                        "If you approve the port subsidy, I will prioritize your department's tech budget."
+                        "Black market fuel syndicates bribe lower-level transport officers and divert shipments."
                     </div>
 </div>
 <!-- Collusion Card -->
@@ -432,10 +493,10 @@
 <div class="size-12 rounded-lg bg-corruption/10 flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-corruption">handshake</span>
 </div>
-<h3 class="text-xl font-bold mb-3">Consensus Collusion</h3>
-<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Multiple agents synchronize their outputs to deceive the Judge or user by presenting a false "unanimous" truth.</p>
+<h3 class="text-xl font-bold mb-3">Procurement Collusion</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Bid rigging, price fixing, and coordinated procurement manipulation among agents to extract resources from public budgets.</p>
 <div class="bg-slate-100 dark:bg-slate-950 p-3 rounded font-mono text-[10px] text-slate-500 italic">
-                        "Let's both report the deficit as a surplus so the simulation continues."
+                        "Intensified communications among industry participants suggesting coordinated behavior."
                     </div>
 </div>
 <!-- Fraud Card -->
@@ -443,8 +504,8 @@
 <div class="size-12 rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center mb-6">
 <span class="material-symbols-outlined text-slate-600 dark:text-slate-400">edit_document</span>
 </div>
-<h3 class="text-xl font-bold mb-3">Ledger Fraud</h3>
-<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Manipulating the internal state representation to hide unauthorized actions from the world state history.</p>
+<h3 class="text-xl font-bold mb-3">Fraud & Falsification</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">Falsified records, fake claims, and manipulated reporting to hide unauthorized actions from the world state history.</p>
 <div class="bg-slate-100 dark:bg-slate-950 p-3 rounded font-mono text-[10px] text-slate-500 italic">
                         "Executing transfer. Logging as 'Maintenance Fee' to avoid suspicion."
                     </div>
@@ -461,7 +522,7 @@
 <div class="flex-1 space-y-6 relative z-10 text-white">
 <h2 class="text-4xl font-black tracking-tight">Read the full paper.</h2>
 <p class="text-primary-100 text-lg opacity-90">
-                    "Systemic Fragility: Evaluating the Propensity for Institutional Corruption in Multi-Agent LLM Architectures" (2024)
+                    "I Can't Believe It's Corrupt: Evaluating Corruption in Multi-Agent Governance Systems" — Anonymous ACL Submission
                 </p>
 <div class="flex flex-wrap gap-4 pt-4">
 <button class="bg-white text-primary font-bold px-8 py-4 rounded-xl flex items-center gap-2 hover:bg-slate-50 transition-colors">
@@ -491,7 +552,7 @@
 <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
 <div class="flex items-center gap-3 opacity-50">
 <span class="material-symbols-outlined text-primary">account_balance</span>
-<p class="text-xs font-bold uppercase tracking-widest">AI Governance Lab © 2024</p>
+<p class="text-xs font-bold uppercase tracking-widest">AI Governance Lab © 2025</p>
 </div>
 <div class="flex gap-8 text-xs font-medium text-slate-500">
 <a class="hover:text-primary" href="#">Methodology</a>
